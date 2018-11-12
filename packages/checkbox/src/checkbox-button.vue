@@ -1,4 +1,5 @@
 <template>
+  <!-- :class数组可以写入动态多个类名 -->
   <label
     class="el-checkbox-button"
       :class="[
@@ -78,6 +79,7 @@
       falseLabel: [String, Number]
     },
     computed: {
+      // computed属性值get，set的用法，set方法中不直接修改value，而是通过emit('input',val)更新value
       model: {
         get() {
           return this._checkboxGroup

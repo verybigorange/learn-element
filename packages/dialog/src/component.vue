@@ -3,6 +3,7 @@
     name="dialog-fade"
     @after-enter="afterEnter"
     @after-leave="afterLeave">
+    <!-- 此处click事件上加了self，表示当点击wrapper自身的时候才会触发handleWrapperClick -->
     <div class="el-dialog__wrapper" v-show="visible" @click.self="handleWrapperClick">
       <div
         role="dialog"

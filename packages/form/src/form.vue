@@ -13,7 +13,7 @@
     name: 'ElForm',
 
     componentName: 'ElForm',
-
+    // 向其子组件注入变量，这里是注入自身
     provide() {
       return {
         elForm: this
@@ -66,6 +66,7 @@
         }
       });
       /* istanbul ignore next */
+      // 动态绑定一个事件监听
       this.$on('el.form.removeField', (field) => {
         if (field.prop) {
           this.fields.splice(this.fields.indexOf(field), 1);

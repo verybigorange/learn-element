@@ -56,7 +56,7 @@
     //  注入父组件的变量
     inject: {
       elForm: {
-        default: ''
+        default: '' // 默认是空
       },
       elFormItem: {
         default: ''
