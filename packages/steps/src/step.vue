@@ -171,6 +171,7 @@ export default {
   },
 
   mounted() {
+    // index变化了之后，触发回调，然后取消对index的监听。只监听一次
     const unwatch = this.$watch('index', val => {
       this.$watch('$parent.active', this.updateStatus, { immediate: true });
       unwatch();
